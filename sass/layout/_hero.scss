@@ -1,0 +1,38 @@
+.hero {
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background: var(--dark-background-color);
+}
+
+.hero-title {
+  width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main-title {
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.364;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--button-text-color);
+}
+.overlay {
+  background-color: #c4c4c4;
+  max-width: 1600px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../image/hero-min.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
