@@ -81,7 +81,8 @@ button {
   padding-right: 32px;
   padding-left: 32px;
   background: var(--button-text-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -101,9 +102,12 @@ button {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  -webkit-transition-property: opacity;
   transition-property: opacity;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -112,30 +116,44 @@ button {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
   padding: 40px;
   width: 530px;
   height: 580px;
   background-color: var(--button-text-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .btn-modal-close {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: 8px;
   right: 8px;
   padding: 0;
@@ -146,9 +164,12 @@ button {
   fill: currentColor;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  -webkit-transition-property: border, fill;
   transition-property: border, fill;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .btn-modal-close:hover, .btn-modal-close:focus {
@@ -158,8 +179,12 @@ button {
 }
 
 .social-link-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .social-link-item {
@@ -168,21 +193,32 @@ button {
 }
 
 .social-link-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
   background-color: var(--button-text-color);
   fill: var(--icon-color);
   border-radius: 50%;
+  -webkit-transition-property: fill, background-color;
   transition-property: fill, background-color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .follow-footer > .social-link-link {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .follow-footer .social-link-link {
@@ -212,8 +248,13 @@ textarea {
 }
 
 .modal-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .input-label {
@@ -233,9 +274,12 @@ textarea {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.15;
+  -webkit-transition-property: border-color;
   transition-property: border-color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .modal-input:focus {
@@ -255,10 +299,14 @@ textarea {
   top: 50%;
   left: 12px;
   display: block;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition-property: fill;
   transition-property: fill;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .modal-input:focus + .modal-form-input-icon {
@@ -276,9 +324,36 @@ textarea {
   line-height: 1.15;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  -webkit-transition-property: border-color;
   transition-property: border-color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+
+.modal-textarea::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1, 167;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-textarea:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1, 167;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-textarea::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1, 167;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-textarea::placeholder {
@@ -300,7 +375,9 @@ label > a {
 }
 
 .modal-btn {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   display: inline-block;
   margin-top: 30px;
   padding: 10px 55px;
@@ -310,12 +387,16 @@ label > a {
   letter-spacing: 0.06em;
   color: var(--button-text-color);
   background-color: var(--focus-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   outline: none;
+  -webkit-transition-property: background-color;
   transition-property: background-color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .modal-btn:hover, .modal-btn:focus {
@@ -377,9 +458,12 @@ label > a {
   padding-bottom: 32px;
   letter-spacing: 0.02em;
   color: var(--title-color);
+  -webkit-transition-property: color;
   transition-property: color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .navigation-link:hover, .navigation-link:focus {
@@ -396,15 +480,22 @@ label > a {
   height: 4px;
   background: var(--focus-color);
   border-radius: 2px;
-  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .navigation-link.current:hover::after,
 .navigation-link.current:focus::after {
-  transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
 }
 
 .navigation-item .navigation-link.current {
@@ -416,6 +507,8 @@ label > a {
 }
 
 .header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -424,18 +517,30 @@ label > a {
 }
 
 .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: auto;
 }
 
@@ -444,15 +549,22 @@ label > a {
 }
 
 .mail-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  -webkit-transition-property: color;
   transition-property: color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .mail-link:hover, .mail-link:focus {
@@ -460,15 +572,22 @@ label > a {
 }
 
 .tel-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  -webkit-transition-property: color;
   transition-property: color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .tel-link:hover, .tel-link:focus {
@@ -527,8 +646,12 @@ label > a {
 }
 
 .flex-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .contact-flex-footer {
@@ -542,6 +665,8 @@ label > a {
 }
 
 .follow-form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 20px;
 }
@@ -553,13 +678,35 @@ label > a {
   height: 50px;
   color: var(--button-text-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--dark-background-color);
 }
 
 .follow-mail:focus {
   outline: none;
+}
+
+.follow-mail::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.follow-mail:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.follow-mail::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .follow-mail::placeholder {
@@ -570,9 +717,15 @@ label > a {
 }
 
 .follow-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-width: 200px;
   font-weight: 700;
   font-size: 16px;
@@ -580,11 +733,15 @@ label > a {
   letter-spacing: 0.06em;
   color: var(--button-text-color);
   background-color: var(--focus-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  -webkit-transition-property: background-color;
   transition-property: background-color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .follow-btn:hover, .follow-btn:focus {
@@ -604,6 +761,7 @@ label > a {
   height: 600px;
   margin-right: auto;
   margin-left: auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/hero-min.jpg");
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/hero-min.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -638,11 +796,15 @@ label > a {
   letter-spacing: 0.06em;
   color: var(--button-text-color);
   background-color: var(--focus-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  -webkit-transition-property: background-color;
   transition-property: background-color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .order-button:hover, .order-button:focus {
@@ -654,6 +816,8 @@ label > a {
 }
 
 .features-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -666,9 +830,15 @@ label > a {
 }
 
 .features-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 120px;
   margin-bottom: 30px;
   background: var(--button-backgroung-color);
@@ -701,6 +871,8 @@ label > a {
 }
 
 .about-us-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -746,8 +918,12 @@ label > a {
 }
 
 .team-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .team-name {
@@ -781,9 +957,15 @@ label > a {
 }
 
 .client-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .clients-item {
@@ -796,17 +978,26 @@ label > a {
 }
 
 .client-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   fill: var(--icon-color);
+  -webkit-transition-property: border, fill;
   transition-property: border, fill;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .client-link:hover, .client-link:focus {
@@ -821,8 +1012,12 @@ label > a {
 }
 
 .portfolio-button-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 50px;
 }
 
@@ -838,16 +1033,23 @@ label > a {
   color: var(--title-color);
   background-color: var(--button-backgroung-color);
   border-radius: 4px;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition-property: color, background-color, -webkit-box-shadow;
+  transition-property: color, background-color, -webkit-box-shadow;
   transition-property: color, background-color, box-shadow;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  transition-property: color, background-color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .portfolio-button:hover, .portfolio-button:focus {
   color: var(--button-text-color);
   background-color: var(--focus-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-button-item:not(:last-child) {
@@ -855,8 +1057,11 @@ label > a {
 }
 
 .portfolio-galery {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .portfolio-galery-title {
@@ -892,13 +1097,19 @@ label > a {
 }
 
 .portfolio-galery-link {
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
   transition-property: box-shadow;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
 }
 
 .portfolio-galery-link:hover, .portfolio-galery-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .img-pfl-thumb {
@@ -918,10 +1129,16 @@ label > a {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition-property: opasity, -webkit-transform;
+  transition-property: opasity, -webkit-transform;
   transition-property: transform, opasity;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  transition-property: transform, opasity, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.556;
@@ -930,7 +1147,8 @@ label > a {
 
 .portfolio-galery-link:hover .pfl-overlay,
 .portfolio-galery-link:focus .pfl-overlay {
-  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
   opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */
