@@ -1,3 +1,11 @@
+.clients {
+  @include paddings-t-b(94px);
+}
+
+.client-title {
+  @include title();
+}
+
 .client-list {
   display: flex;
   justify-content: space-between;
@@ -7,9 +15,9 @@
 .clients-item {
   width: 170px;
   height: 90px;
-}
-.clients-item:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .client-link {
@@ -25,4 +33,10 @@
   transition-property: border, fill;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--timing-function);
+  &:hover,
+  &:focus {
+    border: 1px solid var(--focus-color);
+    fill: var(--focus-color);
+    cursor: pointer;
+  }
 }

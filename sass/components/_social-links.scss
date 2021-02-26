@@ -20,10 +20,19 @@
   transition-property: fill, background-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--timing-function);
-}
 
-.social-link-link:hover,
-.social-link-link:focus {
-  fill: var(--button-text-color);
-  background-color: var(--focus-color);
+  .follow-footer > & {
+    justify-content: space-between;
+  }
+  .follow-footer & {
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: var(--button-text-color);
+    border-radius: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    fill: var(--button-text-color);
+    background-color: var(--focus-color);
+  }
 }

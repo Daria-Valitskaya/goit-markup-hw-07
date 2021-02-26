@@ -1,3 +1,9 @@
+input,
+textarea {
+  display: block;
+  padding: 0px;
+}
+
 .follow-action {
   margin-bottom: 12px;
   font-weight: 700;
@@ -35,12 +41,11 @@
   transition-property: border-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--timing-function);
-}
-
-.modal-input:focus {
-  cursor: pointer;
-  outline: none;
-  border-color: var(--focus-color);
+  &:focus {
+    cursor: pointer;
+    outline: none;
+    border-color: var(--focus-color);
+  }
 }
 
 .modal-form-input-wrapper {
@@ -58,10 +63,10 @@
   transition-property: fill;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--timing-function);
-}
 
-.modal-input:focus + .modal-form-input-icon {
-  fill: var(--focus-color);
+  .modal-input:focus + & {
+    fill: var(--focus-color);
+  }
 }
 
 .modal-textarea {
@@ -81,20 +86,19 @@
   transition-property: border-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--timing-function);
-}
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1, 167;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 
-.modal-textarea::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1, 167;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.modal-textarea:focus {
-  cursor: pointer;
-  outline: none;
-  border-color: var(--focus-color);
+  &:focus {
+    cursor: pointer;
+    outline: none;
+    border-color: var(--focus-color);
+  }
 }
 
 label > a {
@@ -122,6 +126,11 @@ label > a {
   transition-property: background-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--order-button-color);
+  }
 }
 
 .cheakbox-wrapper {
@@ -140,12 +149,12 @@ label > a {
   height: 15px;
   display: inline-block;
   background-image: url(../image/icons/Vector.svg);
-}
 
-.modal-user-policy:checked + .label-user-policy::before {
-  background-image: url(../image/icons/icon-check.svg);
-}
+  .modal-user-policy:checked + & {
+    background-image: url(../image/icons/icon-check.svg);
+  }
 
-.modal-user-policy:focus + .label-user-policy::before {
-  outline: 2px solid var(--logo-second-part);
+  .modal-user-policy:focus + & {
+    outline: 2px solid var(--logo-second-part);
+  }
 }
