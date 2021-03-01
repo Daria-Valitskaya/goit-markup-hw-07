@@ -19,7 +19,7 @@
   align-items: center;
   height: 120px;
   margin-bottom: 30px;
-  background: var(--button-backgroung-color);
+  background: $button-backgroung-color;
   border-radius: 4px;
 }
 
@@ -28,7 +28,7 @@
 
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--title-color);
+  color: $title-color;
 }
 
 .features-description {

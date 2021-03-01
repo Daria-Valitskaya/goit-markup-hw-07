@@ -4,7 +4,7 @@
 
 .team {
   @include paddings-t-b(94px);
-  background-color: var(--button-backgroung-color);
+  background-color: $button-backgroung-color;
 }
 .team-list {
   display: flex;
@@ -17,7 +17,7 @@
   font-size: 16px;
   line-height: 1.188;
   text-align: center;
-  color: var(--title-color);
+  color: $title-color;
 }
 
 .team-position {

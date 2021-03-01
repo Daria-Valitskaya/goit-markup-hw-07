@@ -10,14 +10,14 @@
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: var(--title-color);
+  color: $title-color;
 }
 
 .portfolio-galery-description {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.875;
-  color: var(--text-color);
+  color: $text-color;
 }
 
 .portfolio-galery-item {
@@ -25,8 +25,8 @@
   margin-right: 30px;
   margin-bottom: 30px;
 
-  background: var(--button-text-color);
-  outline: 1px solid var(--accent-border);
+  background: $button-text-color;
+  outline: 1px solid $accent-border;
 
   &:nth-child(3n) {
     margin-right: 0;
@@ -38,8 +38,8 @@
 
 .portfolio-galery-link {
   transition-property: box-shadow;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
 
   &:hover,
   &:focus {
@@ -68,13 +68,13 @@
 
   transform: translateY(100%);
   transition-property: transform, opasity;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
 
   font-weight: 400;
   font-size: 18px;
   line-height: 1.556;
-  color: var(--button-text-color);
+  color: $button-text-color;
 
   .portfolio-galery-link:hover &,
   .portfolio-galery-link:focus & {

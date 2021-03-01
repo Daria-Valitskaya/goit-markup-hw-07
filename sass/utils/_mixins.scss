@@ -4,7 +4,7 @@
   font-size: 36px;
   line-height: 1.167;
   text-align: center;
-  color: var(--title-color);
+  color: $title-color;
 }
 
 @mixin paddings-t-b($size) {

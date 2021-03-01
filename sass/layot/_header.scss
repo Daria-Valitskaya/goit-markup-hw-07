@@ -1,25 +1,25 @@
 .logo {
   margin-right: 90px;
 
-  font-family: var(--logo-font);
+  font-family: $logo-font;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.192;
-  color: var(--logo-second-part);
+  color: $logo-second-part;
 }
 
 .logo-footer {
   margin-bottom: 20px;
 
-  font-family: var(--logo-font);
-  color: var(--button-text-color);
+  font-family: $logo-font;
+  color: $button-text-color;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
 }
 .logo-first-part {
-  color: var(--focus-color);
+  color: $focus-color;
 }
 
 .navigation-link {
@@ -27,14 +27,14 @@
   @include paddings-t-b(32px);
 
   letter-spacing: 0.02em;
-  color: var(--title-color);
+  color: $title-color;
 
   transition-property: color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
   &:hover,
   &:focus {
-    color: var(--focus-color);
+    color: $focus-color;
   }
 }
 
@@ -47,13 +47,13 @@
 
   width: 100%;
   height: 4px;
-  background: var(--focus-color);
+  background: $focus-color;
   border-radius: 2px;
   transform: scaleY(1);
 
   transition-property: transform;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
 }
 .navigation-link.current:hover::after,
 .navigation-link.current:focus::after {
@@ -62,7 +62,7 @@
 
 .navigation-item {
   & .navigation-link.current {
-    color: var(--focus-color);
+    color: $focus-color;
   }
 
   &:not(:last-child) {
@@ -100,14 +100,14 @@
   @include paddings-t-b(32px);
 
   letter-spacing: 0.02em;
-  color: var(--text-color);
+  color: $text-color;
 
   transition-property: color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
   &:hover,
   &:focus {
-    color: var(--focus-color);
+    color: $focus-color;
   }
 }
 
@@ -117,15 +117,15 @@
   @include paddings-t-b(32px);
 
   letter-spacing: 0.02em;
-  color: var(--text-color);
+  color: $text-color;
 
   transition-property: color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--timing-function);
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
 
   &:hover,
   &:focus {
-    color: var(--focus-color);
+    color: $focus-color;
   }
 }
 .icon-mail,
